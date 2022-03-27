@@ -53,22 +53,34 @@ In many cases, you can initiate a testing session from a context menu. For this 
   <div class="welcome-image-right-section wf-section">
     <div class="centered-container horizontal-flex">
       <div class="feature-section-content-2 feature-section-content-left">
-        <h2 class="feature-section-heading-1">Git</h2>
-        <p class="paragraph"><p style="font-size:24px">Git (/ɡɪt/) is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems)</p>
-    <h2>Branches</h2>
-    <p style="font-size:24px">
-        A branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is master . As you start making commits, you're given a master branch that points to the last commit you made. Every time you commit, the master branch pointer moves forward automatically
-    </p>
-    <img src="../../static/images/git_branches.png" alt="git_branches" width="250" height="200" float="right">
-    <h2>Merge</h2>
-    <p style="font-size:24px">Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.</p>
-    <h2>Commit</h2>
-    <p style="font-size:24px">The git commit command captures a snapshot of the project's currently staged changes. Committed snapshots can be thought of as “safe” versions of a project—Git will never change them unless you explicitly ask it to. </p>
-    <h2>Tags</h2>
-    <p style="font-size:24px">Tags are ref's that point to specific points in Git history. Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1. 0.1). A tag is like a branch that doesn't change. Unlike branches, tags, after being created, have no further history of commits.</p>
-    <h2>Repository</h2>
-    <p style="font-size:24px">A Git repository is the . git/ folder inside a project. This repository tracks all changes made to files in your project, building a history over time. Meaning, if you delete the . git/ folder, then you delete your project's history.</p>.</p>
-      </div><img src="../../static/images/Git_logo.png" loading="lazy" width="600" height="384" alt="" class="feature-section-image">
+        <h2 class="feature-section-heading-1">CI/CD</h2>
+          <cite style="font-size:24px">Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly. This article is a quick overview of Continuous Integration summarizing the technique and its current usage. ~Martin Fowler</cite>
+    <h2>Practices of Continuous Integration</h2>
+    <h3>Maintain a Single Source Repository.</h3>
+    <p style="font-size:24px">Software projects involve lots of files that need to be orchestrated together to build a product. Keeping track of all of these is a major effort, particularly when there's multiple people involved. So it's not surprising that over the years software development teams have built tools to manage all this. These tools - called Source Code Management tools, configuration management, version control systems, repositories, or various other names - are an integral part of most development projects. The sad and surprising thing is that they aren't part of all projects. It is rare, but I do run into projects that don't use such a system and use some messy combination of local and shared drives.</p>
+    <h3>Automate the Build</h3>
+    <p style="font-size:24px">Getting the sources turned into a running system can often be a complicated process involving compilation, moving files around, loading schemas into the databases, and so on. However like most tasks in this part of software development it can be automated - and as a result should be automated</p>
+    <h3>Make Your Build Self-Testing</h3>
+    <p style="font-size:24px">A good way to catch bugs more quickly and efficiently is to include automated tests in the build process. Testing isn't perfect, of course, but it can catch a lot of bugs - enough to be useful. In particular the rise of Extreme Programming (XP) and Test Driven Development (TDD) have done a great deal to popularize self-testing code and as a result many people have seen the value of the technique.</p>
+    <h2>Setting up My CI/CD</h2>
+    <ul style="font-size:24px">
+        <li><h4>Github Actions</h4></li>
+            <li>Github actions enables you to create custom software for development lifecycle flows</li>
+            <li>setup the prod.yml : change the authorization for your own heroku id/pass</li>
+            <li>setup the dev.yml : change the authorization key and heroku id/pass</li>
+        <li><h4>Review Code</h4></li>
+        <p> using the merge pull in github you can review the code before merging pull requests in Github Pull Requests tab</p>
+        <li><h4>Deploy master to a production server</h4></li>
+        <p>make a test branch or feature branch, work on the branch and merge pull the branch. after the tests are done and everything works perfectly we can merge it to the main branch for deployment purposes</p>
+
+        <li><h4>Deploy image of your project to Dockerhub when master is updated</h4></li>
+        <p> use the secrets in your github settings-->actions-->secrets tab</p>
+        <p>create a new secret for DockerHub username and password</p>
+        <p>once that part is done docker push (docker repository name)</p>
+        <p> this should allow you to integrate without your dockerhub repo</p>
+    </ul>
+
+      </div><img src="" loading="lazy" width="600" height="384" alt="" class="feature-section-image">
     </div>
   </div>
   <div class="w-container"></div>
