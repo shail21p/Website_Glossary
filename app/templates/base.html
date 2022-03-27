@@ -42,6 +42,12 @@
                         {{ render_nav_item('simple_pages.about','About') }}
                         {{ render_nav_item('simple_pages.welcome','Welcome') }}
                     </div>
+                    <nav role="navigation" class="nav-menu w-nav-menu">
+                        <a href="#" class="navbar-light-bold-link-2 w-nav-link">About</a>
+                        <a href="#" class="navbar-light-bold-link-2 w-nav-link">Work</a>
+                        <a href="#" class="navbar-light-bold-link-2 w-nav-link">Blog</a>
+                        <a href="#" class="navbar-light-navbutton w-button">Contact </a>
+                    </nav>
                 </div>
                 <div class="navbar-nav d-flex">
                     {% if current_user.is_authenticated %}
