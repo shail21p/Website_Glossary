@@ -1,21 +1,45 @@
 {% extends "base.html" %}
 <article>{% block content %}
-    <h1>Git & Docker</h1>
+    <h1>Pycharm & CI-CD</h1>
    <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner" class="navbar-dark w-nav"></div>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner" class="navbar-light w-nav"></div>
   <div class="welcome-image-left-section wf-section">
-    <div class="centered-container horizontal-flex"><img src="../../static/images/docker.png" loading="lazy" width="600" height="384" alt="" class="feature-section-image">
+    <div class="centered-container horizontal-flex"><img src="../../static/images/pycharm.png.png" loading="lazy" width="600" height="384" alt="" class="feature-section-image">
       <div class="feature-section-content">
-        <h2 class="feature-section-heading-1">Docker</h2>
-        <p class="paragraph">A Docker image is a read-only template that contains a set of instructions for creating a container that can run on the Docker platform. It provides a convenient way to package up applications and preconfigured server environments, which you can use for your own private use or share publicly with other Docker users.</p>
-          <h2>Docker commands</h2>
-          <ul style="font-size:24px">
-        <li>docker -version : Displays current docker version</li>
-        <li>docker pull : pulls images from repository</li>
-        <li>docker ps: lists the number of containers with their ids</li>
-        <li>docker stop (container id):stops the selected container </li>
-        <li>docker commit (container id)(username/imagename):starts a local copy</li>
+        <h2 class="feature-section-heading-1">Pycharm</h2>
+        <p class="paragraph">Generally, PyCharm runs and debugs tests in the same way as other applications, by running the run/debug configurations you have created. When doing so, it passes the specified test classes or methods to the test runner.
+
+In many cases, you can initiate a testing session from a context menu. For this purpose, the Run and Debug commands are provided in certain context menus. For example, these commands are available for a test class, directory, or a package in the Project tool window. They are also available for a test class or method you are currently working on in the editor.</p>
+    <h3>Files and their Representation</h3>
+           <ul style="font-size:24px">
+        <li><h3>Simple pages</h3></li>
+            <li>Templates</li>
+                <li>about: general info regarding self</li>
+                <li>index: general index page</li>
+                <li>Pages1-4: general data pages</li>
+            <li>Dunder page</li>
+        <li><h3>Static</h3></li>
+            <li>Css:Basic Styling and format</li>
+            <li>images:image files used in current web pages</li>
+            <li>JS: JavaScript :runs basic javascript on pages</li>
+        <li><h3>templates</h3></li>
+            <li>base html: basic file layout to work on</li>
+            <li>dunder file</li>
+            <li>Run file</li>
+        <li><h3>Calculator</h3></li>
+            <li>Operations:basic operations for maths</li>
+        <li><h3>test</h3></li>
+            <li>Test pages to check for errors</li>
+        <li><h3>venv</h3></li>
+            <li>Flask file : creates flask</li>
+            <li>Composer file : Ochestration file that contains the configuration to develop locally, it overrides the Dockerfile to run the flask development server instead of running the gunicorn server that is used for hosting on Heroku</li>
+            <li>docker file: File used to create an image to run in container and runs the program</li>
+            <li>Heroku.yml: Transfers the flask on heroku app so it runs via Heroku</li>
+            <li>Pytest file : the .ini file is responsible for excuting pytests properly</li>
+            <li>Read me and requirements</li>
+            <li>Setup file</li>
+    </ul>
     </ul>
     <h2>Accesing terminal using commands</h2>
     <ul style="font-size:24px">
