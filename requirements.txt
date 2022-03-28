@@ -1,14 +1,14 @@
 setuptools
 wheel
-Flask
+Flask==2.1.0
 pytest-cov
-pytest
+pytest==7.1.1
 pycodestyle
 pytest-pylint
 gunicorn
 uwsgi
 Jinja2
-Werkzeug
+Werkzeug==2.1.0
 bootstrap-flask
 Flask-WTF
 flask_sqlalchemy
