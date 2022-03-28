@@ -39,3 +39,10 @@ def CI_CDPycharm():
         return render_template('CI_CDPycharm.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/OOPs')
+def OOPs():
+    try:
+        return render_template('OOPs.html')
+    except TemplateNotFound:
+        abort(404)
