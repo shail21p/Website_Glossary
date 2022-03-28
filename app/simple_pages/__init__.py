@@ -60,3 +60,10 @@ def Calculator_En():
         return render_template('Calculator_En.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/SOLID_calc')
+def SOLID_calc():
+    try:
+        return render_template('SOLID_calc.html')
+    except TemplateNotFound:
+        abort(404)
