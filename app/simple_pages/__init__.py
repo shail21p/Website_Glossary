@@ -53,3 +53,10 @@ def AAA_Testing():
         return render_template('AAA_Testing.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/Calculator_En')
+def Calculator_En():
+    try:
+        return render_template('Calculator_En.html')
+    except TemplateNotFound:
+        abort(404)
