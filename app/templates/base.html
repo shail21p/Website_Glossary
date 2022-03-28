@@ -42,15 +42,9 @@
                         {{ render_nav_item('simple_pages.about','About') }}
                         {{ render_nav_item('simple_pages.welcome','Welcome') }}
                         {{ render_nav_item('simple_pages.Git_Docker','Git_Docker') }}
+                        {{ render_nav_item('simple_pages.CI_CDPycharm','CI_CDPycharm') }}
                     </div>
-                    <nav role="navigation" class="nav-menu w-nav-menu">
-                        <a href="../simple_pages/templates/Git_Docker.html" class="navbar-light-bold-link-2 w-nav-link">Git/Docker</a>
-                        <a href="../simple_pages/templates/CI-CD&Pycharm.html" class="navbar-light-bold-link-2 w-nav-link">PyCharm/CI-CD</a>
-                        <a href="#" class="navbar-light-bold-link-2 w-nav-link">OOP Term Glossary</a>
-                        <a href="#" class="navbar-light-bold-link-2 w-nav-link">AAA Testing</a>
-                        <a href="#" class="navbar-light-bold-link-2 w-nav-link">Principle OOP</a>
-                        <a href="#" class="navbar-light-navbutton w-button">SOLID</a>
-                    </nav>
+
                 </div>
                 <div class="navbar-nav d-flex">
                     {% if current_user.is_authenticated %}

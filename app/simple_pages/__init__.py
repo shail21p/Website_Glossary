@@ -32,3 +32,10 @@ def Git_Docker():
         return render_template('Git_Docker.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/CI-CD&Pycharm')
+def CI_CDPycharm():
+    try:
+        return render_template('CI_CDPycharm.html')
+    except TemplateNotFound:
+        abort(404)
