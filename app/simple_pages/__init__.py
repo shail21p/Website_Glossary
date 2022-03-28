@@ -25,3 +25,10 @@ def welcome():
         return render_template('welcome.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/Git_Docker')
+def Git_Docker():
+    try:
+        return render_template('Git_Docker.html')
+    except TemplateNotFound:
+        abort(404)
