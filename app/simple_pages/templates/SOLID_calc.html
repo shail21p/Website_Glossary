@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 <article>{% block content %}
     <h1>Calculator and it's working on the SOLID principles</h1>
+
     <h3>Single Responsibility Principle</h3>
+    <p style="font-size:22px">A class should have on and only one reason to change, meaning that a class should only have one job</p>
+    <p style="font-size:22px">in the calculator a class such as a function of addition,subtraction or multiplication is built only to do one function and one function only. Meaning that the addition class CANNOT be used for any other specific function.</p>
+    <img src="../../static/images/addition_method.png" width="100%" height="300" alt="addition function">
     <h3>Open-Closed Principle</h3>
+    <p style="font-size:22px">Objects or entities should be open for extension but closed for modification.</p>
+    <p style="font-size:22px">In the calculator the the functions are stated with return methods, meaning they can be changed, and also removing the if/else statements required for it to function. This can still be modified as per needs.</p>
+    <img src="../../static/images/subtraction_ex.png" width="100%" height="300" alt="explanation of functions">
     <h3>Liskov Substitution Principle</h3>
+    <p style="font-size:22px">Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T</p>
+    <p style="font-size:22px">instead of using sum datas or subtraction datas, the calculator uses the return function to recall the data, now this can be a float,double or integer this fullfills the Liskov substitution principle</p>
     <h3>Interface Segregation Principle</h3>
+    <p style="font-size:22px">A client should never be forced to implement an interface that it doesn't use, or clients shouldn't be forced fo depend on methods they do not use.</p>
+    <p style="font-size:22px">The calculator class consists of the functions "Required" by the clients to be used, there are no extra functions in it which would confuse the user.</p>
     <h3>Dependency Inversion Principle</h3>
+    <p style="font-size:22px">Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions</p>
+    <p style="font-size:22px"></p>
 
 
 {% endblock %}
