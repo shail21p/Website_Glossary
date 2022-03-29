@@ -4,7 +4,6 @@ from jinja2 import TemplateNotFound
 simple_pages = Blueprint('simple_pages', __name__,
                         template_folder='templates')
 
-
 @simple_pages.route('/')
 def index():
     try:
@@ -67,3 +66,4 @@ def SOLID_calc():
         return render_template('SOLID_calc.html')
     except TemplateNotFound:
         abort(404)
+
