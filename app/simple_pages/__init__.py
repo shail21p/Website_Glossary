@@ -1,8 +1,7 @@
 from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 
-simple_pages = Blueprint('simple_pages', __name__,
-                        template_folder='templates')
+from app import simple_pages
 
 
 @simple_pages.route('/')
@@ -67,3 +66,4 @@ def SOLID_calc():
         return render_template('SOLID_calc.html')
     except TemplateNotFound:
         abort(404)
+
