@@ -40,6 +40,10 @@ def register():
             user = User(email=form.email.data, password=generate_password_hash(form.password.data))
             db.session.add(user)
             db.session.commit()
+            if user.id == 1:
+                user.is_admin = 1
+                db.session.add(user)
+                db.session.commit()
             flash('Congratulations, you are now a registered user!', "success")
             return redirect(url_for('auth.login'))
         else:
